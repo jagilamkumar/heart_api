@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: heart
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: MONGO_URI
+        value: "mongodb+srv://mluser:Kumar321@cluster0.u30ux5m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+"
